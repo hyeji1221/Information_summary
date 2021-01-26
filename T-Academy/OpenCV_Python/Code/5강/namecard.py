@@ -58,7 +58,7 @@ contours, _ = cv2.findContours(src_bin, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE
 
 for pts in contours:
     # 너무 작은 객체는 제외
-    if cv2.contourArea(pts) < 10:
+    if cv2.contourArea(pts) < 1000:
         continue
 
     # 외곽선 근사화
